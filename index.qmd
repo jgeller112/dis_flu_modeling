@@ -1,0 +1,5 @@
+---
+title: "Perceptual Disfluency and Recognition Memory: A Response Time Distributional Analysis"
+---
+
+-   Reproducible document for the paper
