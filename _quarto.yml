@@ -1,5 +1,6 @@
 project:
   type: book
+  output-dir: docs
 
 book:
   title: "Perceptual Disfluency and Recognition Memory: A Mathematical and Computational Analysis of RT Distributions"
