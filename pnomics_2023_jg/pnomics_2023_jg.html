@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="generator" content="pandoc" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<!--
+Font-awesome icons ie github or twitter
+-->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/brands.css" integrity="sha384-n9+6/aSqa9lBidZMRCQHTHKJscPq6NW4pCQBiMmHdUCvPN8ZOg2zJJTkC7WIezWv" crossorigin="anonymous">
+
+<!--
+Google fonts api stuff
+-->
+
+
+
+<title>Perceptual Disfluency and Recognition Memory:A Response Time Distributional Analysis</title>
+
+
+<script src="pnomics_2023_jg_files/kePrint-0.0.1/kePrint.js"></script>
+<link href="pnomics_2023_jg_files/lightable-0.0.1/lightable.css" rel="stylesheet" />
+
+
+
+
+<style>
+@page {
+size: 46in 38in;
+margin: 0;
+padding: 0;
+}
+body {
+margin: 0;
+font-size: 30pt;
+width: 46in;
+height: 38in;
+padding: 0;
+text-align: justify;
+font-family: Palatino;
+}
+.poster_wrap {
+width: 46in;
+height: 38in;
+padding: 0cm;
+}
+.title_container {
+width: 46in;
+height: calc(38in * 0.15);
+overflow: hidden;
+background-color: #0b4545;
+border: 0 solid #0b4545;
+}
+.logo_left {
+float: left;
+width: 10%;
+height: 100%;
+background-color: #0b4545;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.logo_right {
+float: right;
+width: 10%;
+height: 100%;
+background-color: #0b4545;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.poster_title {
+text-align: center;
+position: relative;
+float: left;
+width: 80%;
+height: 100%;
+color: #FFFFFF;
+top: 50%;
+transform: translateY(-50%);
+-webkit-transform: translateY(-50%);
+}
+#title {
+font-family: Palatino;
+}
+/* unvisited link */
+a:link {
+color: #cc0000;
+}
+.mybreak {
+  break-before: column;
+}
+/* visited link */
+a:visited {
+color: #cc0000;
+}
+
+/* mouse over link */
+a:hover {
+color: #cc0000;
+}
+
+/* selected link */
+a:active {
+color: #cc0000;
+}
+.poster_body {
+-webkit-column-count: 4; /* Chrome, Safari, Opera */
+-moz-column-count: 4; /* Firefox */
+column-count: 4;
+-webkit-column-fill: auto;
+-moz-column-fill: auto;
+column-fill: auto;
+-webkit-column-rule-width: 1mm;
+-moz-column-rule-width: 1mm;
+column-rule-width: 1mm;
+-webkit-column-rule-style: dashed;
+-moz-column-rule-style: dashed;
+column-rule-style: dashed;
+-webkit-column-rule-color: #0b4545;
+-moz-column-rule-color: #0b4545;
+column-rule-color: #0b4545;
+column-gap: 1em;
+padding-left: 0.5em;
+padding-right: 0.5em;
+height: 100%;
+color: #000000
+background-color: #ffffff;
+}
+.poster_title h1 {
+font-size: 80pt;
+margin: 0;
+border: 0;
+font-weight: normal;
+}
+.poster_body_wrap{
+width: calc(46in + 0 + 0);
+height: calc(38in * 0.83);
+padding-top: calc(38in * 0.005);
+padding-bottom: calc(38in * 0.01);
+background-color: #ffffff;
+}
+.poster_title h3 {
+color: #ffffff;
+font-size: 50pt;
+margin: 0;
+border: 0;
+font-weight: normal;
+}
+.poster_title h3 > sup {
+  font-size: 35pt;
+  margin-left: 0.02em;
+}
+.poster_title h5 {
+color: #FFFFFF;
+font-size: 35pt;
+margin: 0;
+border: 0;
+font-weight: normal;
+}
+img {
+margin-top: 2cm;
+margin-bottom: 0;
+}
+.section {
+  padding: 0.2em;
+}
+.poster_body h1 {
+text-align: center;
+color: #FFFFFF;
+font-size: 65pt;
+border: 2mm solid #0b4545;
+background-color: #0b4545;
+border-radius: 4mm 0mm;
+margin-top: 2mm;
+margin-bottom: 2mm;
+font-weight: normal;
+}
+.poster_body h2 {
+color: #000000;
+font-size: 40pt;
+padding-left: 4mm;
+font-weight: normal;
+}
+.span {
+width: 200%;
+}
+/* center align leaflet map,
+from https://stackoverflow.com/questions/52112119/center-leaflet-in-a-rmarkdown-document */
+.html-widget {
+margin: auto;
+position: sticky;
+margin-top: 2cm;
+margin-bottom: 2cm;
+}
+.leaflet.html-widget.html-widget-static-bound.leaflet-container.leaflet-touch.leaflet-fade-anim.leaflet-grab.leaflet-touch-drag.leaflet-touch-zoom {
+position: sticky;
+width: 100%;
+}
+pre.sourceCode.r {
+background-color: #dddddd40;
+border-radius: 4mm;
+padding: 4mm;
+width: 75%;
+/* align-items: center; */
+margin: auto;
+padding-left: 2cm;
+}
+code.sourceCode.r{
+background-color: transparent;
+font-size: 20pt;
+border-radius: 2mm;
+}
+.caption {
+font-size: 25pt;
+}
+.table caption {
+font-size: 25pt;
+padding-bottom: 3mm;
+
+}
+code {
+font-size: 1em;
+font-family: monospace;
+background-color: #00808024;
+color: #0b4545;
+padding: 1.2mm;
+border-radius: 2mm;
+}
+.poster_title code {
+font-size: 1em;
+}
+table {
+font-size: 40px;
+margin: auto;
+border-top: 3px solid #666;
+border-bottom: 3px solid #666;
+}
+table thead th {
+border-bottom: 3px solid #ddd;
+}
+td {
+padding: 8px;
+}
+th {
+padding: 15px;
+}
+caption {
+margin-bottom: 10px;
+}
+.poster_body p {
+margin-right: 4mm;
+margin-left: 4mm;
+margin-top: 6mm;
+margin-bottom: 10mm;
+}
+.poster_body ol {
+margin-right: 4mm;
+margin-left: 4mm;
+}
+#ul {
+margin-right: 4mm;
+margin-left: 4mm;
+}
+.references p {
+font-size: 20pt;
+}
+.orcid img {
+  width: 1em;
+}
+</style>
+</head>
+<body>
+
+
+<div class="poster_wrap">
+<div class="title_container">
+<!-- Left Logo  -->
+<div class="logo_left">
+<img src= 'https://user-images.githubusercontent.com/18429968/195991582-a39c6663-a89d-4fae-bdc7-60ed81c3b35b.png' style="width: 80%">
+</div>
+<!-- Poster Title -->
+<div class= "poster_title">
+<h1 id="title">Perceptual Disfluency and Recognition Memory:A Response Time Distributional Analysis</h1>
+<h3 id="author">Jason Geller<sup>1, <a class="orcid" href="https://orcid.org/0000-0002-7459-4505"><img src="https://raw.githubusercontent.com/brentthorne/posterdown/master/images/orcid.jpg"></a></sup>, Pablo Gomez<sup>2</sup></h3><br>
+<h5 id="affiliation"><sup>1</sup> Department of Psychology, Princeton University<br> <sup>2</sup> Department of Psychology, Skidmore College</h5>
+</div>
+<!-- Right Logo  -->
+<div class="logo_right">
+<img src=https://user-images.githubusercontent.com/18429968/195991582-a39c6663-a89d-4fae-bdc7-60ed81c3b35b.png style="width: 80%">
+</div>
+</div>
+
+<div class='poster_body_wrap'>
+<div class='poster_body'>
+<div id="introduction" class="section level1">
+<h1>Introduction</h1>
+<ul>
+<li><p>Perceptual disfluency like blurring can act as a desirable difficulty <span class="citation">(Rosner et al., 2015)</span></p>
+<p><img src="images/pic1-01.png" width="50%" style="display: block; margin: auto;" /></p></li>
+</ul>
+<div id="theoretical-accounts" class="section level2">
+<h2>Theoretical Accounts</h2>
+<table class="table" style="font-size: 28px; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Account
+</th>
+<th style="text-align:left;">
+Description
+</th>
+<th style="text-align:left;">
+Loci
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Meta-cognitive
+</td>
+<td style="text-align:left;">
+Perceptual disfluency affects meta-cognitive processes via increased system 2 processing
+</td>
+<td style="text-align:left;">
+Post-lexical
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Compensatory-processing
+</td>
+<td style="text-align:left;">
+Perceptual disfluency affects the word recognition process
+</td>
+<td style="text-align:left;">
+Lexical
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Stage-specific
+</td>
+<td style="text-align:left;">
+Disfluency effects relies on (1) the stage or level of processing tapped by the task and (2) monitoring and control processes
+</td>
+<td style="text-align:left;">
+Lexical/semantic and Post-lexical
+</td>
+</tr>
+</tbody>
+</table>
+<div id="problem-traditional-methods-e.g.-mean-rts-make-to-hard-to-investigate-underlying-mechanisms" class="section level3">
+<h3>Problem: Traditional methods (e.g., mean RTs) make to hard to investigate underlying mechanisms</h3>
+</div>
+</div>
+</div>
+<div id="goals" class="section level1">
+<h1>Goals</h1>
+<ul>
+<li><p>Examine the disfluency effect with differing levels of disfluency</p></li>
+<li><p>Apply distributional (ex-Gaussian) and computational (diffusion modeling) analyses to study underlying mechanisms of the disfluency effect</p></li>
+</ul>
+</div>
+<div id="general-methods" class="section level1">
+<h1>General Methods</h1>
+<table class="table" style="font-size: 28px; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Experiment
+</th>
+<th style="text-align:right;">
+N
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Experiment 1a
+</td>
+<td style="text-align:right;">
+216
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Experiment 1b
+</td>
+<td style="text-align:right;">
+216
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Experiment 2
+</td>
+<td style="text-align:right;">
+435
+</td>
+</tr>
+</tbody>
+</table>
+<p><img src="images/combo_methods.png" width="80%" style="display: block; margin: auto;" /></p>
+</div>
+<div id="experiment-1a-and-1b" class="section level1">
+<h1>Experiment 1a and 1b</h1>
+<blockquote>
+<p>Results from 1b were virtually identical and thus not reported</p>
+</blockquote>
+<div id="rts" class="section level2">
+<h2>RTs</h2>
+<ul>
+<li>Predictions</li>
+</ul>
+<table class="table" style="font-size: 28px; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Account
+</th>
+<th style="text-align:left;">
+Ex-Gaussian
+</th>
+<th style="text-align:left;">
+Diffusion.Model
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Metacognitive
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(\tau\)</span>: incresaed skewing
+</td>
+<td style="text-align:left;">
+decreased drift rate
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Compensatory
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(\tau\)</span>: increased skewing
+</td>
+<td style="text-align:left;">
+decreased drift rate
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(\mu\)</span>: increased shifiting
+</td>
+<td style="text-align:left;">
+increased ndt
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Stage-specific
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(\tau\)</span>: increased skewing
+</td>
+<td style="text-align:left;">
+decreased drift rate
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+<span class="math inline">\(\mu\)</span>: increased shifiting
+</td>
+<td style="text-align:left;">
+increased ndt
+</td>
+</tr>
+</tbody>
+</table>
+<div id="ex-gaussian-and-drift-diffusion" class="section level3">
+<h3>Ex-Gaussian and Drift Diffusion</h3>
+<p><img src="images/p_all-diff.png" width="100%" style="display: block; margin: auto;" /></p>
+</div>
+<div id="quantile-plots" class="section level3">
+<h3>Quantile Plots</h3>
+<p><img src="images/figure_quant.png" width="80%" style="display: block; margin: auto;" /><img src="images/figure_delta.png" width="80%" style="display: block; margin: auto;" /></p>
+<ul>
+<li><p><strong>High blurred words showed increased skewing</strong> <span class="math inline">\(\tau\)</span> <strong>and shifting</strong> <span class="math inline">\(\mu\)</span><strong>, lower drift, and higher ndt compared to low blurred and clear words</strong></p>
+<ul>
+<li><strong>Low blurred words only affected the</strong> <span class="math inline">\(\mu\)</span> <strong>and</strong> <span class="math inline">\(ndt\)</span></li>
+</ul></li>
+<li><p><strong>Results consistent with compensatory and stage-specific accounts</strong></p></li>
+</ul>
+</div>
+<div id="memory" class="section level3">
+<h3>Memory</h3>
+<ul>
+<li><p>Predictions</p>
+<ul>
+<li>High blur words will show a disfluency effect</li>
+</ul></li>
+<li><p>Results</p></li>
+</ul>
+<p><img src="images/expt1a-dprime.png" width="100%" style="display: block; margin: auto;" /></p>
+<ul>
+<li><strong>High blur words better remembered than low blurred and clear words</strong></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="experiment-2" class="section level1">
+<h1>Experiment 2</h1>
+<ul>
+<li><p>The findings from Experiment 1 do not adjudicate between compensatory and stage specific account</p></li>
+<li><p>Here we look at a lexical factor known to interact with perceptual disfluency: Word Frequency</p>
+<ul>
+<li><p>Compensatory processing account predicts better memory for low frequency words</p></li>
+<li><p>Stage-specific account predicts better memory for high frequency words</p></li>
+</ul></li>
+</ul>
+<div id="ex-gaussian" class="section level3">
+<h3>Ex-Gaussian</h3>
+<p><img src="images/p_gauss_all.png" width="90%" style="display: block; margin: auto;" /></p>
+</div>
+<div id="quantile-plots-1" class="section level3">
+<h3>Quantile Plots</h3>
+<p><img src="images/p_q_wf.png" width="80%" style="display: block; margin: auto;" /><img src="images/p_delt_2.png" width="80%" style="display: block; margin: auto;" /></p>
+</div>
+<div id="memory-1" class="section level3">
+<h3>Memory</h3>
+<p><img src="images/dprime_expt2.png" width="100%" style="display: block; margin: auto;" /></p>
+<ul>
+<li><p>Better memory for low frequency words</p></li>
+<li><p>Better memory for high blurred words</p></li>
+<li><p>High frequency-high blurred words better remembered</p></li>
+</ul>
+</div>
+</div>
+<div id="conclusion" class="section level1">
+<h1>Conclusion</h1>
+<ul>
+<li><p>All disfluency is not equal</p>
+<ul>
+<li><p>High blurred words showed different distribution pattern than low blur words</p>
+<ul>
+<li>High blurred words showed disfluency effect at test</li>
+<li>Useful for future replication attempts</li>
+</ul></li>
+</ul></li>
+<li><p>In Expt 2, memory was better for high frequency-high blurred words</p>
+<ul>
+<li><p>No effect for low frequency words</p></li>
+<li><p>Lends support for compensatory processing account <span class="citation">(Ptok et al., 2019)</span></p></li>
+</ul></li>
+<li><p>Distributional and computational modeling can be a useful tool to examine conflict encoding effects like perceptual disfluency</p></li>
+</ul>
+</div>
+<div id="references" class="section level1 unnumbered">
+<h1>References</h1>
+<div id="refs" class="references csl-bib-body hanging-indent" line-spacing="2">
+<div id="ref-ptok2019" class="csl-entry">
+Ptok, M. J., Thomson, S. J., Humphreys, K. R., &amp; Watter, S. (2019). Congruency encoding effects on recognition memory: A stage-specific account of desirable difficulty. <em>Frontiers in Psychology</em>, <em>10</em>, 858–858. <a href="https://doi.org/10.3389/FPSYG.2019.00858">https://doi.org/10.3389/FPSYG.2019.00858</a>
+</div>
+<div id="ref-rosner2015" class="csl-entry">
+Rosner, T. M., Davis, H., &amp; Milliken, B. (2015). Perceptual blurring and recognition memory: A desirable difficulty effect revealed. <em>Acta Psychologica</em>, <em>160</em>, 1122. <a href="https://doi.org/10.1016/j.actpsy.2015.06.006">https://doi.org/10.1016/j.actpsy.2015.06.006</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+var script = document.createElement("script");
+script.type = "text/javascript";
+var src = "true";
+if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+if (location.protocol !== "file:" && /^https?:/.test(src))
+src = src.replace(/^https?:/, '');
+script.src = src;
+document.getElementsByTagName("head")[0].appendChild(script);
+})();
+</script>
+
+
+</body>
+</html>
