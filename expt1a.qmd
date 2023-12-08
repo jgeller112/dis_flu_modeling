@@ -193,7 +193,7 @@ We preregistered a sample size of 216. All participants were recruited through t
 
 The experiment was run using PsychoPy software and hosted on Pavlovia (www.pavlovia.org). You can see an example of the experiment by navigating to this website: <https://run.pavlovia.org/Jgeller112/ldt_dd_l1_jol_context>.
 
-We used 84 words and 84 nonwords for the LDT. Words were obtained from the the LexOPS package [@LexOPS] in R. All of our words were matched on a number of different lexical dimensions. All words were nouns, 4-6 letters in length, had a known proportion of between 90%-100%, had a low neighborhood density (OLD20 score between 1-2), high concreteness, imageability, and word frequency. Our nonwords were were created using the English Lexicon Project [@balota2007]. Stimuli can be found at our OSF project page cited above.
+We used 84 words and 84 nonwords for the LDT. Words were obtained from the the LexOPS package in R [@taylor2020a]. All of our words were matched on a number of different lexical dimensions. All words were nouns, 4-6 letters in length, had a known proportion of between 90%-100%, had a low neighborhood density (OLD20 score between 1-2), high concreteness, imageability, and word frequency. Our nonwords were were created using the English Lexicon Project [@balota2007]. Stimuli can be found at our OSF project page cited above.
 
 ### Blurring
 
@@ -229,7 +229,7 @@ Model quality was thoroughly assessed via predictive prior and posterior checks,
 
 For the ex-Gaussian analyses we excluded trials with RTs lower than 200 ms or higher than 2500 ms as well as incorrect responses (% of trials).
 
-We used the ex-Gaussian distribution to model response times, with both the mean of the Gaussian component 𝜇 and the scale parameter ($sigma$) of the exponential component 𝛽 (equaling the inverse of the rate parameter 𝜆) being allowed to vary between conditions. In addition, to better visualize the distributional features of the latency data, we computed the delta plots for all variables.
+We used the ex-Gaussian distribution to model response times, with both the mean of the Gaussian component 𝜇 and the scale parameter ($$\sigma$$) of the exponential component 𝛽 (equaling the inverse of the rate parameter 𝜆) being allowed to vary between conditions. In addition, to better visualize the distributional features of the latency data, we computed the delta plots for all variables.
 
 Lastly, to model response accuracy, we used the Bernoulli distribution with a logit link. We only excluded trials with RTs lower than 200 ms or higher than 2500 ms (% of trials).
 
@@ -499,7 +499,6 @@ p <- ggplot(blur_rt_new, aes(rt_ms, group = blur, fill = blur)) +
 p
 ```
 
-
 ```{r}
 
 ## Contrasts
@@ -621,19 +620,19 @@ p2<-conditional_effects(fit_c, "blur", dpar = "sigma")
 p3<-conditional_effects(fit_c, "blur", dpar = "beta")
 
 p1 <- plot(p1, plot = FALSE)[[1]] +  labs(x = "Blur", y = "Mu", 
-       color = "blur", fill = "blur") + scale_x_discrete(labels=c('Clear', 'High Blur', 'Low Blur')) + theme_minimal(base_size=36)
+       color = "blur", fill = "blur") + scale_x_discrete(labels=c('Clear', 'High Blur', 'Low Blur')) + theme_minimal(base_size=20)
 
 p2 <- plot(p2, plot = FALSE)[[1]] +  labs(x = "Blur", y = "Sigma", 
-       color = "blur", fill = "blur") + scale_x_discrete(labels=c('Clear', 'High Blur', 'Low Blur')) + theme_minimal(base_size=36)
+       color = "blur", fill = "blur") + scale_x_discrete(labels=c('Clear', 'High Blur', 'Low Blur')) + theme_minimal(base_size=20)
 
 p3 <- plot(p3, plot = FALSE)[[1]] +  labs(x = "Blur", y = "Beta/Tau", 
-       color = "blur", fill = "blur") + scale_x_discrete(labels=c('Clear', 'High Blur', 'Low Blur')) + theme_minimal(base_size=36)
+       color = "blur", fill = "blur") + scale_x_discrete(labels=c('Clear', 'High Blur', 'Low Blur')) + theme_minimal(base_size=20)
 
 p_all = p1+p2+p3
 
 p_all
 
-ggsave("p_all-ex.png", width=26, height=12, dpi=500)
+ggsave("p_all-ex.png", width=8, height=4, dpi=500)
 
 
 ```
@@ -1249,7 +1248,7 @@ p_mean <-sdt2 %>%  #get means for plot
 
 Experiment 1a successfully replicated the pattern of results found in @rosner2015. Specifically, we found high blurred words had lower accuracy than clear and low blurred words, but had better memory.
 
-Adding to this, we utilized cognitive and mathematical modeling to gain further insights into the mechanisms underlying the perceptual disfluency effect. Descriptively, high blurred words induced a more pronounced shift in the RT distribution (μ) and exhibited a higher degree of skew (τ) compared to clear and low blurred words. However, low blurred words did not differ compared to clear words on $\mu$ or $\beta$. These patterns can be clearly seen in our quantile delta plots in Fig. 3. 
+Adding to this, we utilized cognitive and mathematical modeling to gain further insights into the mechanisms underlying the perceptual disfluency effect. Descriptively, high blurred words induced a more pronounced shift in the RT distribution (μ) and exhibited a higher degree of skew (τ) compared to clear and low blurred words. However, low blurred words did not differ compared to clear words on $\mu$ or $\beta$. These patterns can be clearly seen in our quantile delta plots in Fig. 3.
 
 We also fit the RTs and accuracy data to a diffusion model, which allowed us to make stronger inferences as it relates to stages of processing. High blurred words impacted both an early, non-decision, component evinced by higher $T_{er}$ and a later more analytic, component evinced by a lower $v$ than clear or low blurred words. On the other hand, low blurred words only affected $T_{er}$.
 
