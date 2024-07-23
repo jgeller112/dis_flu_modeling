@@ -5,41 +5,7 @@ csl: apa.csl
 
 # Experiment 1a: Context Reinstatement
 
-In Experiment 1a, we collected RTs from a lexical decision task (LDT) during encoding followed by a surprise recognition memory test. Using a two-choice task like the LDT allowed us to examine how perceptual disfluency affects encoding processes using distributional analyses. Based on previous research [@geller2021], there was no mention of the recognition test when participants signed up for the study to give us the best chance of observing a disfluency effect. In this experiment and all other experiments reported here, we manipulated perceptual disfluency by blurring the words at three levels. Participants were presented with clear words (no blur), low blurred words (5% Gaussian blur) and high blurred words (15% Gaussian blur). High level blurring at this level has been shown to enhance memory [@rosner2015]. By examining different levels of perceptual disfluency, we provide a more nuanced account of encoding processes and how this affects memory. As @geller2018 noted, not all manipulations are created equal. Perceptual manipulations affect processing in different ways. It is important to show just how these manipulations affect different stages of processing and what type of manipulations do and do not produce a disfluency effect.
-
-Using the ex-Gaussian distribution will provide us a descriptive account of how disfluency manipulations affect encoding. We predicted differential effects on ex-Gaussian parameters. More specifically, we predicted high blurred words would not only shift the entire distribution (an effect on $\mu$), but also change the shape of the distribution (an effect on $\tau$ ), indicating a combination of early and late processes. A similar pattern has been found with hard-to-read handwritten words [e.g., @perea2016; @vergara-martínez2021]. This extra post-lexical processing received by high blurred words is assumed to facilitate better recognition memory. As it pertains to low blurred words, we hypothesized an effect only on the $\mu$ parameter. The finding of better memory for high blurred words, but not low blurred words would be in line with the stage-specific account of conflict encoding [@ptok2019, @ptok2020] as well as a compensatory processing account [@mulligan1996]. Having a better sense of when and where disfluency effects arise is critical in determining its usefulness in the educational milieu.
-
-We can envision other scenarios occurring. One scenario is perceptual disfluency at encoding serves to lengthen the tail of some of the trials as a result of some post-lexical processes. This would manifest itself as distributional skewing (\$\\tau\$) and would support a metacognitive account of disfluency [@alter2013]. In relation to memory performance, this account predicts a similar memory benefit for low and high blurred words. Another scenario entails a general slow down of processing---causing distributional shifting $\mu$, but not skewing $\tau$ . Here memory performance would be best for high blurred and low blurred words.
-
-In terms of the DDM parameters, we predicted high blurred words would affect both $v$ and $T_{er}$ parameters. Specifically, high blurred words would produce lower drift and high $T_{er}$ compared to clear and low blurred words. Additionally, we predicted that low blurred words would only affect $T_{er}$
-
-In addition to ex-Gaussian and DDM analyses, we also used quantile and delta plots to better understand the changes in the RT distribution across different conditions. These techniques are crucial as they shed light on how the impact of a particular manipulation varies across the RT distribution.
-
-The process of visualization through quantile analysis can be broken down into four distinct steps:
-
-1.  **Sorting and Plotting**: For trials that are deemed correct, RTs are arranged in ascending order within each condition. We then plot the average of the specified quantiles (e.g., .1, .2, .3, .4, .5, .9).
-
-2.  **Quantile Averaging Across Participants**: The individual quantiles for each participant are averaged, a concept reminiscent of Vincentiles.
-
-3.  **Between-Condition Quantile Averaging**: The average for each quantile is computed between the conditions.
-
-4.  **Difference Calculation**: We determine the difference between the conditions, ensuring the sign of the difference remains unchanged.
-
-Refer to Figure 1 for a visual representation of the potential patterns you might encounter. Typically, there are four observable patterns:
-
-1.  **No Observable Difference**: The conditions don't show any noticeable distinction.
-
-2.  **Late Differences**: There are increasing differences, suggesting differences manifest later in the sequence.
-
-3.  **Complete Shift**: This indicates a consistent difference across all quantiles, signaling a complete shift in the distribution.
-
-4.  **Early Differences**: This pattern reveals differences early on in the RT distribution.
-
-    ::: callout-note
-    Do you think this would be a cool fig to include? The delta plots need to be changed so MS is on x-axis.
-    :::
-
-[![](https://garstats.files.wordpress.com/2018/09/figure_qplot.png){fig-align="center"}](https://garstats.wordpress.com/tag/vincentile/)
+In Experiment 1a, we collected RTs from a lexical decision task (LDT) during encoding followed by a surprise recognition memory test. Using a two-choice task like the LDT allowed us to examine how perceptual disfluency affects encoding processes using mathematical models. Based on previous research [@geller2021], there was no mention of the recognition test when participants signed up for the study to give us the best chance of observing a disfluency effect.
 
 ## Set-up
 
